@@ -366,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The Cleveland Guardians shocked the baseball world last season, coming from 15.5 games down in mid-July to win the American League Central, a deficit that had never been overcome in the history of Major League Baseball. They finished the month of September with a 20-7 record, surpassing the Detroit Tigers during the final week of the season.</p>
 <p>But even with this amazing end to the season, the Guardians only won their division by a single game. With Detroit being the final team to make the playoffs due to their tiebreaker win over the Astros, which the Guardians also held, Cleveland only made the playoffs by two games. This begs the question: In a game in which so much can be decided on one pitch or one swing, did the Guardians just simply get lucky?</p>
 <p>And thus, how lucky were they? Were they possibly the luckiest division winner ever?</p>
-<p>Let’s look at the stats and determine just that.</p>
+<p>Let’s look at the stats to determine just that.</p>
 <p>Sports Reference’s Major League Baseball site creates a statistical “Luck” value. Sports Reference takes a team’s run differential and determines what a their record should be, and compares it to what their record actually was. Essentially, this gives a good view of how lucky or unlucky a team was.</p>
 <p>Finding the luckiest division winner since Major League Baseball was founded in 1876 is nearly impossible, due to teams switching divisions and even, at some points, uneven number of teams per division. The last change in divisions came between the 2012 and 2013 seasons, when the Houston Astros left the National League Central to join the American League West.</p>
 <p>This left five teams in each division, so we will start there (excluding 2020, due to COVID shortening the season).</p>
@@ -486,7 +486,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>bucs, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Division, DivisionWinLoss), <span class="at">weight=</span>DivisionWinLoss)) <span class="sc">+</span> </span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>third, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Division, DivisionWinLoss), <span class="at">weight=</span>DivisionWinLoss), <span class="at">fill=</span><span class="st">"red"</span>) <span class="sc">+</span> </span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Division Winning Percentage"</span>, </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Division Season"</span>, </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Worst Winning Percentage by Divisions"</span>, </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The Guardians were victorious over the worst division by winnning percentage in the modern era, but this years' NL West also makes and appearance"</span>,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Baseball Reference | By Landen Hastreiter"</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_textbox_simple</span>()) <span class="sc">+</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="fl">7.5</span>),</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -548,23 +561,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="jtdghpceop" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jtdghpceop table {
+<div id="uxfdqmnrty" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uxfdqmnrty table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jtdghpceop thead, #jtdghpceop tbody, #jtdghpceop tfoot, #jtdghpceop tr, #jtdghpceop td, #jtdghpceop th {
+#uxfdqmnrty thead, #uxfdqmnrty tbody, #uxfdqmnrty tfoot, #uxfdqmnrty tr, #uxfdqmnrty td, #uxfdqmnrty th {
   border-style: none;
 }
 
-#jtdghpceop p {
+#uxfdqmnrty p {
   margin: 0;
   padding: 0;
 }
 
-#jtdghpceop .gt_table {
+#uxfdqmnrty .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -590,12 +603,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_caption {
+#uxfdqmnrty .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jtdghpceop .gt_title {
+#uxfdqmnrty .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -607,7 +620,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#jtdghpceop .gt_subtitle {
+#uxfdqmnrty .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -619,7 +632,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#jtdghpceop .gt_heading {
+#uxfdqmnrty .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -631,13 +644,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_bottom_border {
+#uxfdqmnrty .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_col_headings {
+#uxfdqmnrty .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -652,7 +665,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_col_heading {
+#uxfdqmnrty .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -672,7 +685,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jtdghpceop .gt_column_spanner_outer {
+#uxfdqmnrty .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -684,15 +697,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#jtdghpceop .gt_column_spanner_outer:first-child {
+#uxfdqmnrty .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jtdghpceop .gt_column_spanner_outer:last-child {
+#uxfdqmnrty .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jtdghpceop .gt_column_spanner {
+#uxfdqmnrty .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -704,11 +717,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#jtdghpceop .gt_spanner_row {
+#uxfdqmnrty .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jtdghpceop .gt_group_heading {
+#uxfdqmnrty .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -734,7 +747,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#jtdghpceop .gt_empty_group_heading {
+#uxfdqmnrty .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -749,15 +762,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#jtdghpceop .gt_from_md > :first-child {
+#uxfdqmnrty .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jtdghpceop .gt_from_md > :last-child {
+#uxfdqmnrty .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jtdghpceop .gt_row {
+#uxfdqmnrty .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -776,7 +789,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jtdghpceop .gt_stub {
+#uxfdqmnrty .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -789,7 +802,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jtdghpceop .gt_stub_row_group {
+#uxfdqmnrty .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -803,15 +816,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#jtdghpceop .gt_row_group_first td {
+#uxfdqmnrty .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jtdghpceop .gt_row_group_first th {
+#uxfdqmnrty .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jtdghpceop .gt_summary_row {
+#uxfdqmnrty .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -821,16 +834,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jtdghpceop .gt_first_summary_row {
+#uxfdqmnrty .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_first_summary_row.thick {
+#uxfdqmnrty .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jtdghpceop .gt_last_summary_row {
+#uxfdqmnrty .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -840,7 +853,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_grand_summary_row {
+#uxfdqmnrty .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -850,7 +863,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jtdghpceop .gt_first_grand_summary_row {
+#uxfdqmnrty .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -860,7 +873,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_last_grand_summary_row_top {
+#uxfdqmnrty .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -870,11 +883,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_striped {
+#uxfdqmnrty .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jtdghpceop .gt_table_body {
+#uxfdqmnrty .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -883,7 +896,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_footnotes {
+#uxfdqmnrty .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -897,7 +910,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_footnote {
+#uxfdqmnrty .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -906,7 +919,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jtdghpceop .gt_sourcenotes {
+#uxfdqmnrty .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -920,7 +933,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jtdghpceop .gt_sourcenote {
+#uxfdqmnrty .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -928,72 +941,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jtdghpceop .gt_left {
+#uxfdqmnrty .gt_left {
   text-align: left;
 }
 
-#jtdghpceop .gt_center {
+#uxfdqmnrty .gt_center {
   text-align: center;
 }
 
-#jtdghpceop .gt_right {
+#uxfdqmnrty .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jtdghpceop .gt_font_normal {
+#uxfdqmnrty .gt_font_normal {
   font-weight: normal;
 }
 
-#jtdghpceop .gt_font_bold {
+#uxfdqmnrty .gt_font_bold {
   font-weight: bold;
 }
 
-#jtdghpceop .gt_font_italic {
+#uxfdqmnrty .gt_font_italic {
   font-style: italic;
 }
 
-#jtdghpceop .gt_super {
+#uxfdqmnrty .gt_super {
   font-size: 65%;
 }
 
-#jtdghpceop .gt_footnote_marks {
+#uxfdqmnrty .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jtdghpceop .gt_asterisk {
+#uxfdqmnrty .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jtdghpceop .gt_indent_1 {
+#uxfdqmnrty .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jtdghpceop .gt_indent_2 {
+#uxfdqmnrty .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jtdghpceop .gt_indent_3 {
+#uxfdqmnrty .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jtdghpceop .gt_indent_4 {
+#uxfdqmnrty .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jtdghpceop .gt_indent_5 {
+#uxfdqmnrty .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jtdghpceop .katex-display {
+#uxfdqmnrty .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jtdghpceop div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uxfdqmnrty div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
