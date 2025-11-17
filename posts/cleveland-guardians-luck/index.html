@@ -398,10 +398,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour_x =</span> <span class="st">"green"</span>,</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour_xend =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Total Wins vs Expected Wins"</span>, </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Expected Wins vs Total Wins"</span>, </span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Division Winner Season"</span>, </span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Number of Wins vs Expected Wins Amongst Division Winners"</span>, </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The longer the difference between a teams' &lt;span style = 'color:red;'&gt;Expected Wins&lt;/span&gt; and their &lt;span style = 'color:green;'&gt;Actual Wins&lt;/span&gt; , the luckier they were"</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"The longer the difference between a teams' &lt;span style = 'color:red;'&gt;Expected Wins&lt;/span&gt; and their &lt;span style = 'color:green;'&gt;Total Wins&lt;/span&gt; , the luckier they were"</span>,</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Landen Hastreiter"</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_textbox_simple</span>()) <span class="sc">+</span></span>
@@ -442,14 +442,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>divisionwinners, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"lightgrey"</span>)<span class="sc">+</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>cleveland, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>goodteams, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> cleveland,<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.47</span>, <span class="at">y =</span> (<span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span><span class="sc">+</span><span class="fl">0.002</span>), <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> cleveland,<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.485</span>, <span class="at">y =</span> (<span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span><span class="sc">+</span><span class="fl">0.0074</span>), <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="dv">3</span>, <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> goodteams,<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>, <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> badteams,<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>, <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Win% Percentage Against Teams Above .500"</span>, </span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Win% Against Teams Under .500"</span>, </span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Guardians Seem to Struggle Against Good Teams"</span>, </span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Cleveland is one of only fifteen division winners in the current format to finish under .500 against teams that ended over .500"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Cleveland is one of only twelve division winners in the current format to finish under .500 against teams that ended over .500"</span>,</span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Landen Hastreiter"</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_textbox_simple</span>()) <span class="sc">+</span></span>
@@ -559,23 +559,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="kwkziduznm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kwkziduznm table {
+<div id="qbezgpyciy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qbezgpyciy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kwkziduznm thead, #kwkziduznm tbody, #kwkziduznm tfoot, #kwkziduznm tr, #kwkziduznm td, #kwkziduznm th {
+#qbezgpyciy thead, #qbezgpyciy tbody, #qbezgpyciy tfoot, #qbezgpyciy tr, #qbezgpyciy td, #qbezgpyciy th {
   border-style: none;
 }
 
-#kwkziduznm p {
+#qbezgpyciy p {
   margin: 0;
   padding: 0;
 }
 
-#kwkziduznm .gt_table {
+#qbezgpyciy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -601,12 +601,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_caption {
+#qbezgpyciy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kwkziduznm .gt_title {
+#qbezgpyciy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -618,7 +618,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#kwkziduznm .gt_subtitle {
+#qbezgpyciy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -630,7 +630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#kwkziduznm .gt_heading {
+#qbezgpyciy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -642,13 +642,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_bottom_border {
+#qbezgpyciy .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_col_headings {
+#qbezgpyciy .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -663,7 +663,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_col_heading {
+#qbezgpyciy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -683,7 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#kwkziduznm .gt_column_spanner_outer {
+#qbezgpyciy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -695,15 +695,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#kwkziduznm .gt_column_spanner_outer:first-child {
+#qbezgpyciy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kwkziduznm .gt_column_spanner_outer:last-child {
+#qbezgpyciy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kwkziduznm .gt_column_spanner {
+#qbezgpyciy .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -715,11 +715,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#kwkziduznm .gt_spanner_row {
+#qbezgpyciy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kwkziduznm .gt_group_heading {
+#qbezgpyciy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -745,7 +745,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#kwkziduznm .gt_empty_group_heading {
+#qbezgpyciy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -760,15 +760,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#kwkziduznm .gt_from_md > :first-child {
+#qbezgpyciy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kwkziduznm .gt_from_md > :last-child {
+#qbezgpyciy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kwkziduznm .gt_row {
+#qbezgpyciy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -787,7 +787,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#kwkziduznm .gt_stub {
+#qbezgpyciy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -800,7 +800,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kwkziduznm .gt_stub_row_group {
+#qbezgpyciy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -814,15 +814,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#kwkziduznm .gt_row_group_first td {
+#qbezgpyciy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kwkziduznm .gt_row_group_first th {
+#qbezgpyciy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kwkziduznm .gt_summary_row {
+#qbezgpyciy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -832,16 +832,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kwkziduznm .gt_first_summary_row {
+#qbezgpyciy .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_first_summary_row.thick {
+#qbezgpyciy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kwkziduznm .gt_last_summary_row {
+#qbezgpyciy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -851,7 +851,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_grand_summary_row {
+#qbezgpyciy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -861,7 +861,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kwkziduznm .gt_first_grand_summary_row {
+#qbezgpyciy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -871,7 +871,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_last_grand_summary_row_top {
+#qbezgpyciy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -881,11 +881,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_striped {
+#qbezgpyciy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kwkziduznm .gt_table_body {
+#qbezgpyciy .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -894,7 +894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_footnotes {
+#qbezgpyciy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -908,7 +908,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_footnote {
+#qbezgpyciy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -917,7 +917,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kwkziduznm .gt_sourcenotes {
+#qbezgpyciy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -931,7 +931,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kwkziduznm .gt_sourcenote {
+#qbezgpyciy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -939,72 +939,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kwkziduznm .gt_left {
+#qbezgpyciy .gt_left {
   text-align: left;
 }
 
-#kwkziduznm .gt_center {
+#qbezgpyciy .gt_center {
   text-align: center;
 }
 
-#kwkziduznm .gt_right {
+#qbezgpyciy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kwkziduznm .gt_font_normal {
+#qbezgpyciy .gt_font_normal {
   font-weight: normal;
 }
 
-#kwkziduznm .gt_font_bold {
+#qbezgpyciy .gt_font_bold {
   font-weight: bold;
 }
 
-#kwkziduznm .gt_font_italic {
+#qbezgpyciy .gt_font_italic {
   font-style: italic;
 }
 
-#kwkziduznm .gt_super {
+#qbezgpyciy .gt_super {
   font-size: 65%;
 }
 
-#kwkziduznm .gt_footnote_marks {
+#qbezgpyciy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kwkziduznm .gt_asterisk {
+#qbezgpyciy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kwkziduznm .gt_indent_1 {
+#qbezgpyciy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kwkziduznm .gt_indent_2 {
+#qbezgpyciy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kwkziduznm .gt_indent_3 {
+#qbezgpyciy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kwkziduznm .gt_indent_4 {
+#qbezgpyciy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kwkziduznm .gt_indent_5 {
+#qbezgpyciy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kwkziduznm .katex-display {
+#qbezgpyciy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kwkziduznm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qbezgpyciy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
