@@ -170,12 +170,12 @@ font-style: inherit;">"Number of Wins vs Expected Wins Amongst Division Winners"
 background-color: null;
 font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"The longer the difference between a teams' &lt;span style = 'color:green;'&gt;Wins&lt;/span&gt; and their &lt;span style = 'color:red;'&gt;Expected Wins&lt;/span&gt; , the luckier they were"</span>,</span>
+font-style: inherit;">"The longer the difference between a teams' &lt;span style = 'color:red;'&gt;Expected Wins&lt;/span&gt; and their &lt;span style = 'color:green;'&gt;Actual Wins&lt;/span&gt; , the luckier they were"</span>,</span>
 <span id="cb1-29">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Source: Baseball Reference | By Landen Hastreiter"</span></span>
+font-style: inherit;">"Source: Sports Reference | By Landen Hastreiter"</span></span>
 <span id="cb1-30">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
@@ -509,7 +509,7 @@ font-style: inherit;">"Cleveland is one of only fifteen division winners in the 
 background-color: null;
 font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Source: Baseball Reference | By Landen Hastreiter"</span></span>
+font-style: inherit;">"Source: Sports Reference | By Landen Hastreiter"</span></span>
 <span id="cb3-24">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
@@ -686,7 +686,7 @@ font-style: inherit;">"Cleveland was victorious over the worst division by winnn
 background-color: null;
 font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Source: Baseball Reference | By Landen Hastreiter"</span></span>
+font-style: inherit;">"Source: Sports Reference | By Landen Hastreiter"</span></span>
 <span id="cb4-22">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
@@ -751,7 +751,7 @@ font-style: inherit;">12</span>))</span></code></pre></div></div>
 <p>To determine this, we can first look at the team hitting stats from this last season. A team that absolutely crushes the baseball can afford to be a weaker pitching team.</p>
 <p>Two common baseball stats that Sports Reference uses are On-Base Percentage and Slugging Percentage. If you add these two values together, you get On-Base Plus Slugging, or OPS.</p>
 <p>Another stat used is OPS+. OPS+ shows how good a team’s OPS was against league average. It is measured with a base of 100 being exactly league average. Anything more than 100 is above average, and subsequently anything less than 100 is below league average.</p>
-<p>To determine how good Cleveland was last year at the plate, we can take a look at each team’s OPS, and OPS+.</p>
+<p>To determine how good Cleveland was last year at the plate, we can take a look at each team’s OPS, and OPS+ from 2025.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -826,7 +826,7 @@ font-style: inherit;">"Did The Guardians Hit Their Way To A Title?"</span>,</spa
 background-color: null;
 font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Cleveland posted the worst batting average by a division winner in the modern era"</span></span>
+font-style: inherit;">"Cleveland posted the second worst batting average across baseball last season"</span></span>
 <span id="cb5-13">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span> <span class="fu" style="color: #4758AB;
@@ -893,7 +893,7 @@ font-style: inherit;">source_note =</span> <span class="fu" style="color: #4758A
 background-color: null;
 font-style: inherit;">md</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"**By:** Landen Hastreiter  |  **Source:** Baseball Reference"</span>)</span>
+font-style: inherit;">"**By:** Landen Hastreiter  |  **Source:** Sports Reference"</span>)</span>
 <span id="cb5-22">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span></span>
@@ -992,23 +992,23 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
 <span id="cb5-39">  )</span></code></pre></div></div>
 </details>
 <div class="cell-output-display">
-<div id="txfnnmodrs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#txfnnmodrs table {
+<div id="kwkziduznm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kwkziduznm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#txfnnmodrs thead, #txfnnmodrs tbody, #txfnnmodrs tfoot, #txfnnmodrs tr, #txfnnmodrs td, #txfnnmodrs th {
+#kwkziduznm thead, #kwkziduznm tbody, #kwkziduznm tfoot, #kwkziduznm tr, #kwkziduznm td, #kwkziduznm th {
   border-style: none;
 }
 
-#txfnnmodrs p {
+#kwkziduznm p {
   margin: 0;
   padding: 0;
 }
 
-#txfnnmodrs .gt_table {
+#kwkziduznm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1034,12 +1034,12 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-left-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_caption {
+#kwkziduznm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#txfnnmodrs .gt_title {
+#kwkziduznm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1051,7 +1051,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-width: 0;
 }
 
-#txfnnmodrs .gt_subtitle {
+#kwkziduznm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1063,7 +1063,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-top-width: 0;
 }
 
-#txfnnmodrs .gt_heading {
+#kwkziduznm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1075,13 +1075,13 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_bottom_border {
+#kwkziduznm .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_col_headings {
+#kwkziduznm .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1096,7 +1096,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_col_heading {
+#kwkziduznm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1116,7 +1116,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   overflow-x: hidden;
 }
 
-#txfnnmodrs .gt_column_spanner_outer {
+#kwkziduznm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1128,15 +1128,15 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 4px;
 }
 
-#txfnnmodrs .gt_column_spanner_outer:first-child {
+#kwkziduznm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#txfnnmodrs .gt_column_spanner_outer:last-child {
+#kwkziduznm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#txfnnmodrs .gt_column_spanner {
+#kwkziduznm .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1148,11 +1148,11 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   width: 100%;
 }
 
-#txfnnmodrs .gt_spanner_row {
+#kwkziduznm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#txfnnmodrs .gt_group_heading {
+#kwkziduznm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1178,7 +1178,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   text-align: left;
 }
 
-#txfnnmodrs .gt_empty_group_heading {
+#kwkziduznm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1193,15 +1193,15 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   vertical-align: middle;
 }
 
-#txfnnmodrs .gt_from_md > :first-child {
+#kwkziduznm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#txfnnmodrs .gt_from_md > :last-child {
+#kwkziduznm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#txfnnmodrs .gt_row {
+#kwkziduznm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1220,7 +1220,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   overflow-x: hidden;
 }
 
-#txfnnmodrs .gt_stub {
+#kwkziduznm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1233,7 +1233,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#txfnnmodrs .gt_stub_row_group {
+#kwkziduznm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1247,15 +1247,15 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   vertical-align: top;
 }
 
-#txfnnmodrs .gt_row_group_first td {
+#kwkziduznm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#txfnnmodrs .gt_row_group_first th {
+#kwkziduznm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#txfnnmodrs .gt_summary_row {
+#kwkziduznm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1265,16 +1265,16 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#txfnnmodrs .gt_first_summary_row {
+#kwkziduznm .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_first_summary_row.thick {
+#kwkziduznm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#txfnnmodrs .gt_last_summary_row {
+#kwkziduznm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1284,7 +1284,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_grand_summary_row {
+#kwkziduznm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1294,7 +1294,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#txfnnmodrs .gt_first_grand_summary_row {
+#kwkziduznm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1304,7 +1304,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-top-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_last_grand_summary_row_top {
+#kwkziduznm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1314,11 +1314,11 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_striped {
+#kwkziduznm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#txfnnmodrs .gt_table_body {
+#kwkziduznm .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1327,7 +1327,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_footnotes {
+#kwkziduznm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1341,7 +1341,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_footnote {
+#kwkziduznm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1350,7 +1350,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#txfnnmodrs .gt_sourcenotes {
+#kwkziduznm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1364,7 +1364,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#txfnnmodrs .gt_sourcenote {
+#kwkziduznm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1372,72 +1372,72 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#txfnnmodrs .gt_left {
+#kwkziduznm .gt_left {
   text-align: left;
 }
 
-#txfnnmodrs .gt_center {
+#kwkziduznm .gt_center {
   text-align: center;
 }
 
-#txfnnmodrs .gt_right {
+#kwkziduznm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#txfnnmodrs .gt_font_normal {
+#kwkziduznm .gt_font_normal {
   font-weight: normal;
 }
 
-#txfnnmodrs .gt_font_bold {
+#kwkziduznm .gt_font_bold {
   font-weight: bold;
 }
 
-#txfnnmodrs .gt_font_italic {
+#kwkziduznm .gt_font_italic {
   font-style: italic;
 }
 
-#txfnnmodrs .gt_super {
+#kwkziduznm .gt_super {
   font-size: 65%;
 }
 
-#txfnnmodrs .gt_footnote_marks {
+#kwkziduznm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#txfnnmodrs .gt_asterisk {
+#kwkziduznm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#txfnnmodrs .gt_indent_1 {
+#kwkziduznm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#txfnnmodrs .gt_indent_2 {
+#kwkziduznm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#txfnnmodrs .gt_indent_3 {
+#kwkziduznm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#txfnnmodrs .gt_indent_4 {
+#kwkziduznm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#txfnnmodrs .gt_indent_5 {
+#kwkziduznm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#txfnnmodrs .katex-display {
+#kwkziduznm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#txfnnmodrs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kwkziduznm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1448,7 +1448,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
 <td colspan="3" class="gt_heading gt_title gt_font_normal" style="text-align: left; color: #000000; font-weight: bold;">Did The Guardians Hit Their Way To A Title?</td>
 </tr>
 <tr class="gt_heading even">
-<td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">Cleveland posted the worst batting average by a division winner in the modern era</td>
+<td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">Cleveland posted the second worst batting average across baseball last season</td>
 </tr>
 <tr class="gt_col_headings header">
 <th id="TeamSzn" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">TeamSzn</th>
@@ -1609,7 +1609,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
 </tr>
 </tbody><tfoot>
 <tr class="gt_sourcenotes odd">
-<td colspan="3" class="gt_sourcenote"><strong>By:</strong> Landen Hastreiter | <strong>Source:</strong> Baseball Reference</td>
+<td colspan="3" class="gt_sourcenote"><strong>By:</strong> Landen Hastreiter | <strong>Source:</strong> Sports Reference</td>
 </tr>
 </tfoot>
 
@@ -1631,32 +1631,31 @@ background-color: null;
 font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"https://docs.google.com/spreadsheets/d/e/2PACX-1vQmpETjsJGA8mrzSp03UJFBBCrsZeXvSTDI7_tY112Kh9ITTWOzmlA_DjPnK6PjADe_uYD6S5wLmzJS/pub?gid=1455997034&amp;single=true&amp;output=csv"</span>)</span>
-<span id="cb6-2"></span>
-<span id="cb6-3">qualified <span class="ot" style="color: #003B4F;
+<span id="cb6-2">qualified <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> pitchers <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span> </span>
-<span id="cb6-4">  <span class="fu" style="color: #4758AB;
+<span id="cb6-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">group_by</span>(Team) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span> </span>
-<span id="cb6-5">  <span class="fu" style="color: #4758AB;
+<span id="cb6-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">desc</span>(wOBADiff.)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span> </span>
-<span id="cb6-6">  <span class="fu" style="color: #4758AB;
+<span id="cb6-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">slice</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">n</span>()) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span> </span>
-<span id="cb6-7">  <span class="fu" style="color: #4758AB;
+<span id="cb6-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(PA <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1665,55 +1664,55 @@ background-color: null;
 font-style: inherit;">161</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb6-8">  <span class="fu" style="color: #4758AB;
+<span id="cb6-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ungroup</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span> </span>
-<span id="cb6-9">  <span class="fu" style="color: #4758AB;
+<span id="cb6-8">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">desc</span>(PA))</span>
-<span id="cb6-10"></span>
-<span id="cb6-11">guardians <span class="ot" style="color: #003B4F;
+<span id="cb6-9"></span>
+<span id="cb6-10">guardians <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> qualified <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span></span>
-<span id="cb6-12">  <span class="fu" style="color: #4758AB;
+<span id="cb6-11">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(Team <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Cleveland Guardians"</span>)</span>
-<span id="cb6-13"></span>
-<span id="cb6-14">land <span class="ot" style="color: #003B4F;
+<span id="cb6-12"></span>
+<span id="cb6-13">land <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> pitchers <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span></span>
-<span id="cb6-15">  <span class="fu" style="color: #4758AB;
+<span id="cb6-14">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(Team <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Cleveland Guardians"</span>)</span>
-<span id="cb6-16"></span>
-<span id="cb6-17"><span class="fu" style="color: #4758AB;
+<span id="cb6-15"></span>
+<span id="cb6-16"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1234</span>)</span>
-<span id="cb6-18"></span>
-<span id="cb6-19"><span class="fu" style="color: #4758AB;
+<span id="cb6-17"></span>
+<span id="cb6-18"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb6-20">  <span class="fu" style="color: #4758AB;
+<span id="cb6-19">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_vline</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1724,18 +1723,18 @@ background-color: null;
 font-style: inherit;">0.025</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
-<span id="cb6-21">  <span class="fu" style="color: #4758AB;
+<span id="cb6-20">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_beeswarm</span>(</span>
-<span id="cb6-22">    <span class="at" style="color: #657422;
+<span id="cb6-21">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">data=</span>pitchers, </span>
-<span id="cb6-23">    <span class="at" style="color: #657422;
+<span id="cb6-22">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">groupOnX=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>, </span>
-<span id="cb6-24">    <span class="fu" style="color: #4758AB;
+<span id="cb6-23">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1748,18 +1747,18 @@ background-color: null;
 font-style: inherit;">"grey"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
-<span id="cb6-25">  <span class="fu" style="color: #4758AB;
+<span id="cb6-24">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_beeswarm</span>(</span>
-<span id="cb6-26">    <span class="at" style="color: #657422;
+<span id="cb6-25">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">data=</span>qualified, </span>
-<span id="cb6-27">    <span class="at" style="color: #657422;
+<span id="cb6-26">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">groupOnX=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>, </span>
-<span id="cb6-28">    <span class="fu" style="color: #4758AB;
+<span id="cb6-27">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1772,18 +1771,18 @@ background-color: null;
 font-style: inherit;">"blue"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
-<span id="cb6-29">    <span class="fu" style="color: #4758AB;
+<span id="cb6-28">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_beeswarm</span>(</span>
-<span id="cb6-30">    <span class="at" style="color: #657422;
+<span id="cb6-29">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">data=</span>land, </span>
-<span id="cb6-31">    <span class="at" style="color: #657422;
+<span id="cb6-30">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">groupOnX=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>, </span>
-<span id="cb6-32">    <span class="fu" style="color: #4758AB;
+<span id="cb6-31">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1796,18 +1795,18 @@ background-color: null;
 font-style: inherit;">"darkgrey"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb6-33">  <span class="fu" style="color: #4758AB;
+<span id="cb6-32">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_beeswarm</span>(</span>
-<span id="cb6-34">    <span class="at" style="color: #657422;
+<span id="cb6-33">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">data=</span>guardians, </span>
-<span id="cb6-35">    <span class="at" style="color: #657422;
+<span id="cb6-34">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">groupOnX=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>, </span>
-<span id="cb6-36">    <span class="fu" style="color: #4758AB;
+<span id="cb6-35">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1820,10 +1819,11 @@ background-color: null;
 font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb6-37">  <span class="fu" style="color: #4758AB;
+<span id="cb6-36">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_text</span>(</span>
-<span id="cb6-38">    <span class="fu" style="color: #4758AB;
+font-style: inherit;">geom_text_repel</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data=</span>guardians, <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1831,22 +1831,24 @@ font-style: inherit;">x=</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0.04</span>, <span class="at" style="color: #657422;
+font-style: inherit;">0.038</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Cleveland Guardians"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">"Colorado Rockes"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">label=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Ben Lively (CLE)"</span>), <span class="at" style="color: #657422;
+font-style: inherit;">label=</span>PlayerTeam), <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">size=</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span>) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">3</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb6-39"><span class="fu" style="color: #4758AB;
+<span id="cb6-37"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1868,18 +1870,18 @@ font-style: inherit;">"Cleveland's Ben Lively had the worst wOBA over expected o
 background-color: null;
 font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Source: Baseball Reference | By Landen Hastreiter"</span>) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"Source: Sports Reference | By Landen Hastreiter"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
-<span id="cb6-40">  <span class="fu" style="color: #4758AB;
+<span id="cb6-38">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
-<span id="cb6-41">  <span class="fu" style="color: #4758AB;
+<span id="cb6-39">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb6-42">    <span class="at" style="color: #657422;
+<span id="cb6-40">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1892,7 +1894,7 @@ background-color: null;
 font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"bold"</span>),</span>
-<span id="cb6-43">    <span class="at" style="color: #657422;
+<span id="cb6-41">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1901,7 +1903,7 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">8</span>), </span>
-<span id="cb6-44">    <span class="at" style="color: #657422;
+<span id="cb6-42">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1910,17 +1912,17 @@ background-color: null;
 font-style: inherit;">size=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">9</span>), </span>
-<span id="cb6-45">    <span class="at" style="color: #657422;
+<span id="cb6-43">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">panel.grid.minor =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb6-46">    <span class="at" style="color: #657422;
+<span id="cb6-44">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.title.position =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plot"</span></span>
-<span id="cb6-47">    )</span></code></pre></div></div>
+<span id="cb6-45">    )</span></code></pre></div></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: The `groupOnX` argument of `geom_beeswarm()` is deprecated as of ggbeeswarm
