@@ -1839,7 +1839,7 @@ font-style: inherit;">"plot"</span></span>
   <category>mlb</category>
   <guid>https://your-website-url.example.com/posts/cleveland-guardians-luck/</guid>
   <pubDate>Sun, 16 Nov 2025 06:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/cleveland-guardians-luck/image.png" medium="image" type="image/png"/>
+  <media:content url="https://your-website-url.example.com/posts/cleveland-guardians-luck/image.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 </channel>
 </rss>
