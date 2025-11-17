@@ -647,12 +647,12 @@ font-style: inherit;">"Division Winning Percentage"</span>, </span>
 background-color: null;
 font-style: inherit;">title=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Worst Winning Percentage by Divisions"</span>, </span>
+font-style: inherit;">"Worst Winning Percentage by Division"</span>, </span>
 <span id="cb4-20">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"The Guardians were victorious over the worst division by winnning percentage in the modern era, but this years' NL West also makes an appearance"</span>,</span>
+font-style: inherit;">"Cleveland was victorious over the worst division by winnning percentage in the modern era, but this years' NL West also makes an appearance"</span>,</span>
 <span id="cb4-21">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
@@ -684,9 +684,9 @@ font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB
 background-color: null;
 font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">size =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">12</span>, <span class="at" style="color: #657422;
+font-style: inherit;">13.5</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -966,23 +966,23 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
 <span id="cb5-42">  )</span></code></pre></div></div>
 </details>
 <div class="cell-output-display">
-<div id="vymwilasli" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vymwilasli table {
+<div id="aeohxyggaw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#aeohxyggaw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vymwilasli thead, #vymwilasli tbody, #vymwilasli tfoot, #vymwilasli tr, #vymwilasli td, #vymwilasli th {
+#aeohxyggaw thead, #aeohxyggaw tbody, #aeohxyggaw tfoot, #aeohxyggaw tr, #aeohxyggaw td, #aeohxyggaw th {
   border-style: none;
 }
 
-#vymwilasli p {
+#aeohxyggaw p {
   margin: 0;
   padding: 0;
 }
 
-#vymwilasli .gt_table {
+#aeohxyggaw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1008,12 +1008,12 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-left-color: #D3D3D3;
 }
 
-#vymwilasli .gt_caption {
+#aeohxyggaw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vymwilasli .gt_title {
+#aeohxyggaw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1025,7 +1025,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-width: 0;
 }
 
-#vymwilasli .gt_subtitle {
+#aeohxyggaw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1037,7 +1037,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-top-width: 0;
 }
 
-#vymwilasli .gt_heading {
+#aeohxyggaw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1049,13 +1049,13 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#vymwilasli .gt_bottom_border {
+#aeohxyggaw .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vymwilasli .gt_col_headings {
+#aeohxyggaw .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1070,7 +1070,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#vymwilasli .gt_col_heading {
+#aeohxyggaw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1090,7 +1090,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   overflow-x: hidden;
 }
 
-#vymwilasli .gt_column_spanner_outer {
+#aeohxyggaw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1102,15 +1102,15 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 4px;
 }
 
-#vymwilasli .gt_column_spanner_outer:first-child {
+#aeohxyggaw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vymwilasli .gt_column_spanner_outer:last-child {
+#aeohxyggaw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vymwilasli .gt_column_spanner {
+#aeohxyggaw .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1122,11 +1122,11 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   width: 100%;
 }
 
-#vymwilasli .gt_spanner_row {
+#aeohxyggaw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vymwilasli .gt_group_heading {
+#aeohxyggaw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1152,7 +1152,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   text-align: left;
 }
 
-#vymwilasli .gt_empty_group_heading {
+#aeohxyggaw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1167,15 +1167,15 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   vertical-align: middle;
 }
 
-#vymwilasli .gt_from_md > :first-child {
+#aeohxyggaw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vymwilasli .gt_from_md > :last-child {
+#aeohxyggaw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vymwilasli .gt_row {
+#aeohxyggaw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1194,7 +1194,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   overflow-x: hidden;
 }
 
-#vymwilasli .gt_stub {
+#aeohxyggaw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1207,7 +1207,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#vymwilasli .gt_stub_row_group {
+#aeohxyggaw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1221,15 +1221,15 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   vertical-align: top;
 }
 
-#vymwilasli .gt_row_group_first td {
+#aeohxyggaw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vymwilasli .gt_row_group_first th {
+#aeohxyggaw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vymwilasli .gt_summary_row {
+#aeohxyggaw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1239,16 +1239,16 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#vymwilasli .gt_first_summary_row {
+#aeohxyggaw .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#vymwilasli .gt_first_summary_row.thick {
+#aeohxyggaw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vymwilasli .gt_last_summary_row {
+#aeohxyggaw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1258,7 +1258,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-color: #D3D3D3;
 }
 
-#vymwilasli .gt_grand_summary_row {
+#aeohxyggaw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1268,7 +1268,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#vymwilasli .gt_first_grand_summary_row {
+#aeohxyggaw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1278,7 +1278,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-top-color: #D3D3D3;
 }
 
-#vymwilasli .gt_last_grand_summary_row_top {
+#aeohxyggaw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1288,11 +1288,11 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-color: #D3D3D3;
 }
 
-#vymwilasli .gt_striped {
+#aeohxyggaw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vymwilasli .gt_table_body {
+#aeohxyggaw .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1301,7 +1301,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-bottom-color: #D3D3D3;
 }
 
-#vymwilasli .gt_footnotes {
+#aeohxyggaw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1315,7 +1315,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#vymwilasli .gt_footnote {
+#aeohxyggaw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1324,7 +1324,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#vymwilasli .gt_sourcenotes {
+#aeohxyggaw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1338,7 +1338,7 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   border-right-color: #D3D3D3;
 }
 
-#vymwilasli .gt_sourcenote {
+#aeohxyggaw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1346,72 +1346,72 @@ font-style: inherit;">"2025 Cleveland Guardians"</span>)</span>
   padding-right: 5px;
 }
 
-#vymwilasli .gt_left {
+#aeohxyggaw .gt_left {
   text-align: left;
 }
 
-#vymwilasli .gt_center {
+#aeohxyggaw .gt_center {
   text-align: center;
 }
 
-#vymwilasli .gt_right {
+#aeohxyggaw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vymwilasli .gt_font_normal {
+#aeohxyggaw .gt_font_normal {
   font-weight: normal;
 }
 
-#vymwilasli .gt_font_bold {
+#aeohxyggaw .gt_font_bold {
   font-weight: bold;
 }
 
-#vymwilasli .gt_font_italic {
+#aeohxyggaw .gt_font_italic {
   font-style: italic;
 }
 
-#vymwilasli .gt_super {
+#aeohxyggaw .gt_super {
   font-size: 65%;
 }
 
-#vymwilasli .gt_footnote_marks {
+#aeohxyggaw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vymwilasli .gt_asterisk {
+#aeohxyggaw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vymwilasli .gt_indent_1 {
+#aeohxyggaw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vymwilasli .gt_indent_2 {
+#aeohxyggaw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vymwilasli .gt_indent_3 {
+#aeohxyggaw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vymwilasli .gt_indent_4 {
+#aeohxyggaw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vymwilasli .gt_indent_5 {
+#aeohxyggaw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vymwilasli .katex-display {
+#aeohxyggaw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vymwilasli div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#aeohxyggaw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
