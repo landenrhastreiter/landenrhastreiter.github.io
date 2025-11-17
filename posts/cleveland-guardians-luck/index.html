@@ -367,10 +367,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>But even with this amazing end to the season, the Guardians only won their division by a single game. With Detroit being the final team to make the playoffs due to their tiebreaker win over the Astros, which the Guardians also held, Cleveland only made the playoffs by two games. This begs the question: In a game in which so much can be decided on one pitch or one swing, did the Guardians just simply get lucky?</p>
 <p>And thus, how lucky were they? Were they possibly the luckiest division winner ever?</p>
 <p>Let’s look at the stats to determine just that.</p>
-<p>Sports Reference’s Major League Baseball site creates a statistical “Luck” value. Sports Reference takes a team’s run differential and determines what a their record should be, and compares it to what their record actually was. Essentially, this gives a good view of how lucky or unlucky a team was.</p>
+<p>Sports Reference’s Major League Baseball site creates a statistical “Luck” value. Sports Reference takes a team’s run differential and determines what their record should be, and compares it to what their record actually was. Essentially, this gives a good view of how lucky or unlucky a team was.</p>
 <p>Finding the luckiest division winner since Major League Baseball was founded in 1876 is nearly impossible, due to teams switching divisions and even, at some points, uneven number of teams per division. The last change in divisions came between the 2012 and 2013 seasons, when the Houston Astros left the National League Central to join the American League West.</p>
 <p>This left five teams in each division, so we will start there (excluding 2020, due to COVID shortening the season).</p>
-<p>Clearly, the first question to ask is, which division winners benefitted the most from Luck? Here are top 20 luckiest division winners.</p>
+<p>Clearly, the first question to ask is, which division winners benefitted the most from Luck? Here are the top 20 luckiest division winners.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -382,16 +382,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>mlb <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://docs.google.com/spreadsheets/d/e/2PACX-1vQmpETjsJGA8mrzSp03UJFBBCrsZeXvSTDI7_tY112Kh9ITTWOzmlA_DjPnK6PjADe_uYD6S5wLmzJS/pub?gid=1937133345&amp;single=true&amp;output=csv"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>georgia <span class="ot">&lt;-</span> mlb <span class="sc">|&gt;</span> <span class="fu">filter</span>(Year <span class="sc">&gt;</span><span class="dv">2020</span> <span class="sc">|</span> Year <span class="sc">&lt;</span><span class="dv">2020</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>covid <span class="ot">&lt;-</span> mlb <span class="sc">|&gt;</span> <span class="fu">filter</span>(Year <span class="sc">&gt;</span><span class="dv">2020</span> <span class="sc">|</span> Year <span class="sc">&lt;</span><span class="dv">2020</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>winners <span class="ot">&lt;-</span> georgia <span class="sc">|&gt;</span> <span class="fu">filter</span>(DivisionRank <span class="sc">==</span> <span class="st">"1"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>divisionwinners <span class="ot">&lt;-</span> covid <span class="sc">|&gt;</span> <span class="fu">filter</span>(DivisionRank <span class="sc">==</span> <span class="st">"1"</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>too <span class="ot">&lt;-</span> winners <span class="sc">|&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>luckiestteams <span class="ot">&lt;-</span> divisionwinners <span class="sc">|&gt;</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">20</span>, <span class="at">wt=</span>Luck)</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dumbbell</span>(</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>too, </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>luckiestteams, </span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">y=</span><span class="fu">reorder</span>(TeamSzn, <span class="sc">-</span>pythW), <span class="at">x=</span>W, <span class="at">xend=</span>pythW),</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">2</span>,</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour =</span> <span class="st">"grey"</span>,</span>
@@ -428,35 +428,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>guards <span class="ot">&lt;-</span> winners <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cleveland <span class="ot">&lt;-</span> divisionwinners <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(TeamSzn <span class="sc">==</span> <span class="st">"2025 Cleveland Guardians"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>badteam <span class="ot">&lt;-</span> winners <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>goodteams <span class="ot">&lt;-</span> divisionwinners <span class="sc">|&gt;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span> <span class="sc">&gt;</span> <span class="fl">0.63</span>)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>badteam2 <span class="ot">&lt;-</span> winners <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>badteams <span class="ot">&lt;-</span> divisionwinners <span class="sc">|&gt;</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span> <span class="sc">&lt;</span> <span class="fl">0.45</span>)</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>winners, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"lightgrey"</span>)<span class="sc">+</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>guards, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> guards,<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.47</span>, <span class="at">y =</span> (<span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span><span class="sc">+</span><span class="fl">0.002</span>), <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> badteam,<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>, <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> badteam2,<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>, <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Win% Percentage Against Teams Above .500"</span>, </span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Win% Against Teams Under .500"</span>, </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Guardians Seem to Struggle Against Good Teams"</span>, </span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Cleveland is one of only fifteen division winners in the current format to finish under .500 against teams that ended over .500"</span>,</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Baseball Reference | By Landen Hastreiter"</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_textbox_simple</span>()) <span class="sc">+</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>divisionwinners, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"lightgrey"</span>)<span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>cleveland, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>goodteams, <span class="fu">aes</span>(<span class="at">x=</span><span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y=</span><span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>), <span class="at">color=</span><span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> cleveland,<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.47</span>, <span class="at">y =</span> (<span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span><span class="sc">+</span><span class="fl">0.002</span>), <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> goodteams,<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>, <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> badteams,<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Win%≥.500</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Win%&lt;.500</span><span class="st">`</span>, <span class="at">label =</span> TeamSzn), <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Win% Percentage Against Teams Above .500"</span>, </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Win% Against Teams Under .500"</span>, </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Guardians Seem to Struggle Against Good Teams"</span>, </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Cleveland is one of only fifteen division winners in the current format to finish under .500 against teams that ended over .500"</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Baseball Reference | By Landen Hastreiter"</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.subtitle =</span> <span class="fu">element_textbox_simple</span>()) <span class="sc">+</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -472,20 +473,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>prater <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://docs.google.com/spreadsheets/d/e/2PACX-1vQmpETjsJGA8mrzSp03UJFBBCrsZeXvSTDI7_tY112Kh9ITTWOzmlA_DjPnK6PjADe_uYD6S5wLmzJS/pub?gid=1915124800&amp;single=true&amp;output=csv"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>divisionstats <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://docs.google.com/spreadsheets/d/e/2PACX-1vQmpETjsJGA8mrzSp03UJFBBCrsZeXvSTDI7_tY112Kh9ITTWOzmlA_DjPnK6PjADe_uYD6S5wLmzJS/pub?gid=1915124800&amp;single=true&amp;output=csv"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>bucs <span class="ot">&lt;-</span> prater <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>topdivisions <span class="ot">&lt;-</span> divisionstats <span class="sc">|&gt;</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">20</span>, <span class="at">wt=</span>(<span class="sc">-</span>DivisionWinLoss))</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>third <span class="ot">&lt;-</span> bucs <span class="sc">|&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>central <span class="ot">&lt;-</span> topdivisions <span class="sc">|&gt;</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    Division <span class="sc">==</span> <span class="st">"2025 AL Central"</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>bucs, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Division, DivisionWinLoss), <span class="at">weight=</span>DivisionWinLoss)) <span class="sc">+</span> </span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>third, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Division, DivisionWinLoss), <span class="at">weight=</span>DivisionWinLoss), <span class="at">fill=</span><span class="st">"red"</span>) <span class="sc">+</span> </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>topdivisions, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Division, DivisionWinLoss), <span class="at">weight=</span>DivisionWinLoss)) <span class="sc">+</span> </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">data=</span>central, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Division, DivisionWinLoss), <span class="at">weight=</span>DivisionWinLoss), <span class="at">fill=</span><span class="st">"red"</span>) <span class="sc">+</span> </span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Division Season"</span>, </span>
@@ -511,7 +512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The 2025 American League Central and 2016 National League West are tied for the worst division winning percentage of the last 13 years. It isn’t surprising that this is the case, as only one other team from the Central finished above .500, and that team finished just a single game back of the Guardians. But it does raise another question: Was it just luck that willed Cleveland to a division win?</p>
 <p>To determine this, we can first look at the team hitting stats from this last season. A team that absolutely crushes the baseball can afford to be a weaker pitching team.</p>
-<p>Two common baseball stats that Sports Reference uses are On-Base Percentage and Slugging Percentage. On-Base Percentage, or OBP, takes how many times an offense reaches base via hit, walk, intentional walk, or hit by pitch. It also does not reward reaching via error, or penalizing a hitter for hitting a sacrifice fly. Slugging percentage, on the other hand, gives value to how many bases a player earns in a given at-bat, compared to batting average, that has the same amount of value for a single as a home run. If you add these two values together, you get On-Base Plus Slugging, or OPS.</p>
+<p>Two common baseball stats that Sports Reference uses are On-Base Percentage and Slugging Percentage. If you add these two values together, you get On-Base Plus Slugging, or OPS.</p>
 <p>Another stat used is OPS+. OPS+ shows how good a team’s OPS was against league average. It is measured with a base of 100 being exactly league average. Anything more than 100 is above average, and subsequently anything less than 100 is below league average.</p>
 <p>To determine how good Cleveland was last year at the plate, we can take a look at each team’s OPS, and OPS+.</p>
 <div class="cell">
@@ -520,64 +521,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>thisseason <span class="ot">&lt;-</span> mlb <span class="sc">|&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="st">"2025"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>waite <span class="ot">&lt;-</span> thisseason <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>teamops <span class="ot">&lt;-</span> thisseason <span class="sc">|&gt;</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(TeamSzn, OPS, <span class="st">`</span><span class="at">OPS+</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>((OPS))</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>waite <span class="sc">|&gt;</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>teamops <span class="sc">|&gt;</span> </span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">OPS =</span> <span class="st">"OPS"</span>,</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">OPS+</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"OPS+"</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Did The Guardians Hit Their Way To A Title?"</span>,</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Cleveland posted the worst batting average by a division winner in the modern era"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(<span class="at">OPS =</span> <span class="st">"OPS"</span>, <span class="st">`</span><span class="at">OPS+</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"OPS+"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Did The Guardians Hit Their Way To A Title?"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Cleveland posted the worst batting average by a division winner in the modern era"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> <span class="fu">tab_style</span>(</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"title"</span>)</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> <span class="fu">tab_style</span>(</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"title"</span>)</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> <span class="fu">tab_style</span>(</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"subtitle"</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"subtitle"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="fu">md</span>(<span class="st">"**By:** Landen Hastreiter  |  **Source:** Baseball Reference"</span>)</span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="fu">md</span>(<span class="st">"**By:** Landen Hastreiter  |  **Source:** Baseball Reference"</span>)</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>     <span class="at">locations =</span> <span class="fu">cells_column_labels</span>(<span class="at">columns =</span> <span class="fu">everything</span>()),</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>     <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>       <span class="fu">cell_borders</span>(<span class="at">sides =</span> <span class="st">"bottom"</span>, <span class="at">weight =</span> <span class="fu">px</span>(<span class="dv">3</span>)),</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>       <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">size=</span><span class="dv">12</span>)</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>     )</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>   ) <span class="sc">|&gt;</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_row_striping</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_lines</span>(<span class="st">"none"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"red"</span>),</span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"white"</span>)</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>      ),</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(</span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> TeamSzn <span class="sc">==</span> <span class="st">"2025 Cleveland Guardians"</span>)</span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>     <span class="at">locations =</span> <span class="fu">cells_column_labels</span>(<span class="at">columns =</span> <span class="fu">everything</span>()),</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>     <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>       <span class="fu">cell_borders</span>(<span class="at">sides =</span> <span class="st">"bottom"</span>, <span class="at">weight =</span> <span class="fu">px</span>(<span class="dv">3</span>)),</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>       <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">size=</span><span class="dv">12</span>)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>   ) <span class="sc">|&gt;</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_row_striping</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_lines</span>(<span class="st">"none"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"red"</span>),</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"white"</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> TeamSzn <span class="sc">==</span> <span class="st">"2025 Cleveland Guardians"</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="aeohxyggaw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aeohxyggaw table {
+<div id="lnmlzogdkn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lnmlzogdkn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aeohxyggaw thead, #aeohxyggaw tbody, #aeohxyggaw tfoot, #aeohxyggaw tr, #aeohxyggaw td, #aeohxyggaw th {
+#lnmlzogdkn thead, #lnmlzogdkn tbody, #lnmlzogdkn tfoot, #lnmlzogdkn tr, #lnmlzogdkn td, #lnmlzogdkn th {
   border-style: none;
 }
 
-#aeohxyggaw p {
+#lnmlzogdkn p {
   margin: 0;
   padding: 0;
 }
 
-#aeohxyggaw .gt_table {
+#lnmlzogdkn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -603,12 +601,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_caption {
+#lnmlzogdkn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aeohxyggaw .gt_title {
+#lnmlzogdkn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -620,7 +618,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#aeohxyggaw .gt_subtitle {
+#lnmlzogdkn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -632,7 +630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#aeohxyggaw .gt_heading {
+#lnmlzogdkn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -644,13 +642,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_bottom_border {
+#lnmlzogdkn .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_col_headings {
+#lnmlzogdkn .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -665,7 +663,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_col_heading {
+#lnmlzogdkn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -685,7 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#aeohxyggaw .gt_column_spanner_outer {
+#lnmlzogdkn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -697,15 +695,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#aeohxyggaw .gt_column_spanner_outer:first-child {
+#lnmlzogdkn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aeohxyggaw .gt_column_spanner_outer:last-child {
+#lnmlzogdkn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aeohxyggaw .gt_column_spanner {
+#lnmlzogdkn .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -717,11 +715,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#aeohxyggaw .gt_spanner_row {
+#lnmlzogdkn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aeohxyggaw .gt_group_heading {
+#lnmlzogdkn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -747,7 +745,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#aeohxyggaw .gt_empty_group_heading {
+#lnmlzogdkn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -762,15 +760,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#aeohxyggaw .gt_from_md > :first-child {
+#lnmlzogdkn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aeohxyggaw .gt_from_md > :last-child {
+#lnmlzogdkn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aeohxyggaw .gt_row {
+#lnmlzogdkn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -789,7 +787,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#aeohxyggaw .gt_stub {
+#lnmlzogdkn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -802,7 +800,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#aeohxyggaw .gt_stub_row_group {
+#lnmlzogdkn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -816,15 +814,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#aeohxyggaw .gt_row_group_first td {
+#lnmlzogdkn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aeohxyggaw .gt_row_group_first th {
+#lnmlzogdkn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aeohxyggaw .gt_summary_row {
+#lnmlzogdkn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -834,16 +832,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#aeohxyggaw .gt_first_summary_row {
+#lnmlzogdkn .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_first_summary_row.thick {
+#lnmlzogdkn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aeohxyggaw .gt_last_summary_row {
+#lnmlzogdkn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -853,7 +851,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_grand_summary_row {
+#lnmlzogdkn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -863,7 +861,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#aeohxyggaw .gt_first_grand_summary_row {
+#lnmlzogdkn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -873,7 +871,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_last_grand_summary_row_top {
+#lnmlzogdkn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -883,11 +881,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_striped {
+#lnmlzogdkn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aeohxyggaw .gt_table_body {
+#lnmlzogdkn .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -896,7 +894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_footnotes {
+#lnmlzogdkn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -910,7 +908,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_footnote {
+#lnmlzogdkn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -919,7 +917,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#aeohxyggaw .gt_sourcenotes {
+#lnmlzogdkn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -933,7 +931,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#aeohxyggaw .gt_sourcenote {
+#lnmlzogdkn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -941,72 +939,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#aeohxyggaw .gt_left {
+#lnmlzogdkn .gt_left {
   text-align: left;
 }
 
-#aeohxyggaw .gt_center {
+#lnmlzogdkn .gt_center {
   text-align: center;
 }
 
-#aeohxyggaw .gt_right {
+#lnmlzogdkn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aeohxyggaw .gt_font_normal {
+#lnmlzogdkn .gt_font_normal {
   font-weight: normal;
 }
 
-#aeohxyggaw .gt_font_bold {
+#lnmlzogdkn .gt_font_bold {
   font-weight: bold;
 }
 
-#aeohxyggaw .gt_font_italic {
+#lnmlzogdkn .gt_font_italic {
   font-style: italic;
 }
 
-#aeohxyggaw .gt_super {
+#lnmlzogdkn .gt_super {
   font-size: 65%;
 }
 
-#aeohxyggaw .gt_footnote_marks {
+#lnmlzogdkn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aeohxyggaw .gt_asterisk {
+#lnmlzogdkn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aeohxyggaw .gt_indent_1 {
+#lnmlzogdkn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aeohxyggaw .gt_indent_2 {
+#lnmlzogdkn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aeohxyggaw .gt_indent_3 {
+#lnmlzogdkn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aeohxyggaw .gt_indent_4 {
+#lnmlzogdkn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aeohxyggaw .gt_indent_5 {
+#lnmlzogdkn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#aeohxyggaw .katex-display {
+#lnmlzogdkn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#aeohxyggaw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lnmlzogdkn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1188,14 +1186,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Being 29th out of 30 in total OPS and 28th in OPS+, it is clear that Cleveland wasn’t getting their production done at the plate. That doesn’t mean it was just sheer will and luck that got the Guardians to the top of the AL Central. We can also look at pitching stats to determine if their defending was the reason for their success.</p>
-<p>With a each team having five to six starting pitchers on roster that begin games on the mound during a given week, that would be a good place to start.</p>
+<p>With each team having five to six starting pitchers on roster that begin games on the mound during a given week, that would be a good place to start.</p>
 <p>So what about looking at those starting pitchers? Where does Cleveland rank when it comes to expected Allowed On-Base Percentage (wOBA)?</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pitchers <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://docs.google.com/spreadsheets/d/e/2PACX-1vQmpETjsJGA8mrzSp03UJFBBCrsZeXvSTDI7_tY112Kh9ITTWOzmlA_DjPnK6PjADe_uYD6S5wLmzJS/pub?gid=1455997034&amp;single=true&amp;output=csv"</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>lastplace <span class="ot">&lt;-</span> pitchers <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>qualified <span class="ot">&lt;-</span> pitchers <span class="sc">%&gt;%</span> </span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Team) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(wOBADiff.)) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
@@ -1203,10 +1201,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(PA))</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>cleguards <span class="ot">&lt;-</span> lastplace <span class="sc">|&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>guardians <span class="ot">&lt;-</span> qualified <span class="sc">|&gt;</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Team <span class="sc">==</span> <span class="st">"Cleveland Guardians"</span>)</span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>gbr <span class="ot">&lt;-</span> pitchers <span class="sc">|&gt;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>land <span class="ot">&lt;-</span> pitchers <span class="sc">|&gt;</span></span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Team <span class="sc">==</span> <span class="st">"Cleveland Guardians"</span>)</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
@@ -1218,15 +1216,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupOnX=</span><span class="cn">FALSE</span>, </span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>wOBADiff., <span class="at">y=</span>Team), <span class="at">color=</span><span class="st">"grey"</span>) <span class="sc">+</span> </span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_beeswarm</span>(</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>lastplace, </span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>qualified, </span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupOnX=</span><span class="cn">FALSE</span>, </span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>wOBADiff., <span class="at">y=</span>Team), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span> </span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_beeswarm</span>(</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>gbr, </span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>land, </span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupOnX=</span><span class="cn">FALSE</span>, </span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>wOBADiff., <span class="at">y=</span>Team), <span class="at">color=</span><span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
 <span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_beeswarm</span>(</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>cleguards, </span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>guardians, </span>
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupOnX=</span><span class="cn">FALSE</span>, </span>
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>wOBADiff., <span class="at">y=</span>Team), <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
 <span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
