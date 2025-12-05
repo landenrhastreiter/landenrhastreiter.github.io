@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-website-url.example.com/about.html</loc>
+    <loc>https://landenrhastreiter.github.io/about.html</loc>
     <lastmod>2025-11-17T01:27:09.269Z</lastmod>
-  </url>
-  <url>
-    <loc>https://your-website-url.example.com/posts/nfl-runningbacks/index.html</loc>
-    <lastmod>2025-12-05T06:01:38.457Z</lastmod>
-  </url>
-  <url>
-    <loc>https://your-website-url.example.com/posts/cleveland-guardians-luck/index.html</loc>
-    <lastmod>2025-11-17T05:35:48.660Z</lastmod>
-  </url>
-  <url>
-    <loc>https://your-website-url.example.com/index.html</loc>
-    <lastmod>2025-11-17T01:28:15.955Z</lastmod>
-  </url>
-  <url>
-    <loc>https://landenrhastreiter.github.io/index.html</loc>
-    <lastmod>2025-12-05T06:06:04.579Z</lastmod>
   </url>
   <url>
     <loc>https://landenrhastreiter.github.io/posts/nfl-runningbacks/index.html</loc>
     <lastmod>2025-12-05T06:12:19.419Z</lastmod>
+  </url>
+  <url>
+    <loc>https://landenrhastreiter.github.io/posts/cleveland-guardians-luck/index.html</loc>
+    <lastmod>2025-11-17T05:35:48.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://landenrhastreiter.github.io/index.html</loc>
+    <lastmod>2025-12-05T06:06:04.579Z</lastmod>
   </url>
 </urlset>
